@@ -17,7 +17,7 @@ function textoPedido() {
     parseFloat(preco_bebida.replace(",", ".")) +
     parseFloat(preco_sobremesa.replace(",", "."));
   texto += "Total: R$ " + preco.toFixed(2).replace(".", ",");
-
+  texto = "https://wa.me/" + "?text=" + encodeURIComponent(texto);
   return texto;
 }
 
