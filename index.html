@@ -87,7 +87,11 @@
         </div>
       </div>
     </div>
-    <button class="btn-fechar-pedido" disabled>
+    <button
+      class="btn-fechar-pedido btn-desabilitado"
+      disabled
+      onclick="finalizaPedido()"
+    >
       Selecione os 3 itens para fechar o pedido
     </button>
     <button onclick="replica()">replica</button>

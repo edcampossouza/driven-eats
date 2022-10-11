@@ -81,9 +81,20 @@ p.preco::before {
   border-radius: 50px;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
+  color: #ffffff;
   padding: 10px 70px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  border-width: 0;
+}
+
+.btn-desabilitado {
+  background-color: #cbcbcb;
+}
+
+.btn-habilitado {
+  background-color: #32b72f;
 }
 
 .linha-preco {

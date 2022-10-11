@@ -7,21 +7,23 @@ let nome_sobremesa = null,
 
 let itens_selecionados = 0;
 
-function mostraValores() {
-  console.log(
-    `${nome_prato}, ${preco_prato}
-        ${nome_bebida}, ${preco_bebida}
-        ${nome_sobremesa}, ${preco_sobremesa}
-        
-        `
-  );
+function textoPedido() {
+  let texto = "Olá, gostaria de fazer o pedido:\n";
+  texto += "- Prato: " + nome_prato + "\n";
+  texto += "- Bebida: " + nome_bebida + "\n";
+  texto += "- Sobremesa: " + nome_sobremesa + "\n";
+  const preco =
+    parseFloat(preco_prato.replace(",", ".")) +
+    parseFloat(preco_bebida.replace(",", ".")) +
+    parseFloat(preco_sobremesa.replace(",", "."));
+  texto += "Total: R$ " + preco.toFixed(2).replace(".", ",");
+
+  return texto;
 }
+
 function selecionaItem(secao, e) {
-  console.log(secao);
-  console.log(e);
   const preco = e.getElementsByClassName("preco")[0].innerText;
   const nome = e.getElementsByTagName("h2")[0].innerText;
-  console.log(nome, preco);
 
   //remove a selecao de qualquer outro item daquela secao
   const container = document.getElementsByClassName(secao)[0];
@@ -32,7 +34,6 @@ function selecionaItem(secao, e) {
 
   e.classList.add("selecionado");
   setaValores(nome, preco, secao);
-  mostraValores();
 }
 
 function setaValores(nome, preco, secao) {
@@ -49,4 +50,15 @@ function setaValores(nome, preco, secao) {
     nome_sobremesa = nome;
     preco_sobremesa = preco;
   }
+  if (itens_selecionados === 3) {
+    const botao = document.getElementsByClassName("btn-fechar-pedido")[0];
+    botao.innerText = "Fechar pedido";
+    botao.disabled = false;
+    botao.classList.remove("btn-desabilitado");
+    botao.classList.add("btn-habilitado");
+  }
+}
+
+function finalizaPedido() {
+  alert(textoPedido());
 }
