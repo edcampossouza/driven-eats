@@ -1,0 +1,19 @@
+.topo {
+  background-color: #cf2b2b;
+  padding: 8px 0px 18px 21px;
+  color: #fff;
+  font-family: "Righteous", cursive;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+}
+.topo h1 {
+  font-size: 44px;
+}
+
+.topo h2 {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}
+
+p.preco::before {
+  content: "R$ ";
+}
