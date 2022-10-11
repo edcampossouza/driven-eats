@@ -1,3 +1,6 @@
+.body {
+  font-family: "Roboto", sans-serif;
+}
 .topo {
   background-color: #cf2b2b;
   padding: 8px 0px 18px 21px;
@@ -11,9 +14,83 @@
 
 .topo h2 {
   font-size: 18px;
+}
+
+p,
+h2 {
   font-family: "Roboto", sans-serif;
 }
 
+.img-item {
+  width: 144px;
+  height: 87px;
+  border-radius: 4px;
+}
 p.preco::before {
   content: "R$ ";
+}
+.secao {
+  background-color: #eeeeee;
+}
+
+.secao h1 {
+  font-family: "Righteous", cursive;
+  font-size: 26px;
+  margin-left: 19px;
+  margin-bottom: 17px;
+}
+.caixa-items {
+  display: flex;
+  overflow-x: auto;
+  padding-bottom: 16px;
+}
+
+.item-selecao {
+  background-color: #fff;
+  border-radius: 9px;
+  margin: 8px 8px;
+  width: 172px;
+  height: 218px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 8px -3px black;
+}
+
+.item-selecao h2 {
+  color: #333333;
+  font-size: 16pxS;
+  font-weight: bold;
+}
+
+.item-selecao .descricao {
+  color: #a6a6a6;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.item-selecao:nth-child(1) {
+  margin-left: 19px;
+}
+
+.btn-fechar-pedido {
+  width: 364px;
+  height: 61px;
+  border-radius: 50px;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  padding: 10px 70px;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 613px) {
+  /* -O estilo abaixo impossibilita a rolagem lateral no modo mobile */
+  /* -Adicionado apenas para satisfazer o requerimento do projeto: */
+  /* "No modo desktop um scroll é exibido, mas no modo celular não" */
+
+  .caixa-items {
+    overflow-x: hidden;
+  }
 }
