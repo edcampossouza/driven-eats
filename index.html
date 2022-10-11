@@ -24,10 +24,10 @@
       <h1>DrivenEats</h1>
       <h2>Sua comida em 6 minutos</h2>
     </div>
-    <div class="secao">
+    <div class="secao prato">
       <h1>Primeiro, seu prato</h1>
       <div class="caixa-items">
-        <div class="item-selecao selecionado">
+        <div class="item-selecao" onclick="selecionaItem('prato',this)">
           <img
             src="./images/frango_yin_yang 1.png"
             alt="Frango Yin Yang"
@@ -40,7 +40,7 @@
             <img src="./images/checkmark-circle 1.png" alt="selecionado" />
           </div>
         </div>
-        <div class="item-selecao">
+        <div class="item-selecao" onclick="selecionaItem('prato',this)">
           <img
             src="./images/xgalinha.png"
             alt="Frango Yin Yang"
@@ -55,10 +55,10 @@
         </div>
       </div>
     </div>
-    <div class="secao">
+    <div class="secao bebida">
       <h1>Agora, sua bebida</h1>
       <div class="caixa-items">
-        <div class="item-selecao">
+        <div class="item-selecao" onclick="selecionaItem('bebida',this)">
           <img
             src="./images/coquinha_gelada 1.png"
             alt="Coquinha Gelada"
@@ -73,10 +73,10 @@
         </div>
       </div>
     </div>
-    <div class="secao">
+    <div class="secao sobremesa">
       <h1>Por fim, sua sobremesa</h1>
       <div class="caixa-items">
-        <div class="item-selecao">
+        <div class="item-selecao" onclick="selecionaItem('sobremesa',this)">
           <img src="./images/pudim 1.png" alt="Pudim" class="img-item" />
           <h2>Pudim</h2>
           <p class="descricao">Apenas pudim</p>
@@ -94,15 +94,15 @@
     <script>
       function replica() {
         const sec = document.getElementsByClassName("caixa-items");
-        console.log(sec);
-        const item1 = document.getElementsByClassName("item-selecao")[0];
         for (var i = 0; i < 20; i++) {
           for (var j = 0; j < sec.length; j++) {
+            const item1 = sec[j].getElementsByClassName("item-selecao")[0];
             var el = item1.cloneNode(true);
             sec[j].appendChild(el);
           }
         }
       }
     </script>
+    <script src="./script.js"></script>
   </body>
 </html>
