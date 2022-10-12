@@ -21,7 +21,6 @@
   margin-bottom: 4px;
 }
 
-
 p,
 h1,
 h2 {
@@ -36,34 +35,58 @@ h2 {
 p.preco::before {
   content: "R$ ";
 }
+
+.secoes {
+  background-color: #eeeeee;
+  padding-top: 123px;
+  padding-bottom: 92px;
+  
+}
 .secao {
   background-color: #eeeeee;
+  margin-top: 27px;
+}
+
+.secao:nth-child(1) {
+  margin-top: 0px;
 }
 
 .secao h1 {
   font-family: "Righteous", cursive;
   font-size: 26px;
   margin-left: 19px;
-  margin-bottom: 17px;
+  color: #333333;
+  letter-spacing: 0.018em;
 }
 .caixa-items {
   display: flex;
   overflow-x: auto;
-  padding-bottom: 16px;
+  margin-top: 16px;
 }
 
 .item-selecao {
   background-color: #fff;
   border-radius: 9px;
-  margin: 8px 8px;
+  margin: 0px 8px;
   width: 172px;
-  height: 202px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 8px -3px black;
   box-sizing: border-box;
+}
+
+.prato .item-selecao {
+  height: 216px;
+}
+
+.bebida .item-selecao {
+  height: 202px;
+}
+
+.sobremesa .item-selecao {
+  height: 197px;
 }
 
 .item-selecao h2 {
@@ -82,12 +105,23 @@ p.preco::before {
   margin-left: 19px;
 }
 
+.caixa-btn-finaliza {
+  padding: 15px 0 16px 25px;
+  height: 92px;
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-sizing: border-box;
+}
 .btn-fechar-pedido {
   width: 364px;
   height: 61px;
   border-radius: 50px;
   font-size: 20px;
   font-family: "Roboto", sans-serif;
+  letter-spacing: 0.018em;
   color: #ffffff;
   padding: 10px 70px;
   display: flex;

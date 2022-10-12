@@ -24,65 +24,67 @@
       <h1>DrivenEats</h1>
       <h2>Sua comida em 6 minutos</h2>
     </div>
-    <div class="secao prato">
-      <h1>Primeiro, seu prato</h1>
-      <div class="caixa-items">
-        <div class="item-selecao" onclick="selecionaItem('prato',this)">
-          <img
-            src="./images/frango_yin_yang 1.png"
-            alt="Frango Yin Yang"
-            class="img-item"
-          />
-          <h2>Frango Yin Yang</h2>
-          <p class="descricao">Um pouco de batata, um pouco de salada</p>
-          <div class="linha-preco">
-            <p class="preco">14,90</p>
-            <img src="./images/checkmark-circle 1.png" alt="selecionado" />
+    <div class="secoes">
+      <div class="secao prato">
+        <h1>Primeiro, seu prato</h1>
+        <div class="caixa-items">
+          <div class="item-selecao" onclick="selecionaItem('prato',this)">
+            <img
+              src="./images/frango_yin_yang 1.png"
+              alt="Frango Yin Yang"
+              class="img-item"
+            />
+            <h2>Frango Yin Yang</h2>
+            <p class="descricao">Um pouco de batata, um pouco de salada</p>
+            <div class="linha-preco">
+              <p class="preco">14,90</p>
+              <img src="./images/checkmark-circle 1.png" alt="selecionado" />
+            </div>
           </div>
-        </div>
-        <div class="item-selecao" onclick="selecionaItem('prato',this)">
-          <img
-            src="./images/xgalinha.png"
-            alt="Frango Yin Yang"
-            class="img-item"
-          />
-          <h2>X Galinha</h2>
-          <p class="descricao">Frango, mussarela, milho, tomate e batata.</p>
-          <div class="linha-preco">
-            <p class="preco">17,90</p>
-            <img src="./images/checkmark-circle 1.png" alt="selecionado" />
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="secao bebida">
-      <h1>Agora, sua bebida</h1>
-      <div class="caixa-items">
-        <div class="item-selecao" onclick="selecionaItem('bebida',this)">
-          <img
-            src="./images/coquinha_gelada 1.png"
-            alt="Coquinha Gelada"
-            class="img-item"
-          />
-          <h2>Coquinha gelada</h2>
-          <p class="descricao">Lata 350ml</p>
-          <div class="linha-preco">
-            <p class="preco">4,90</p>
-            <img src="./images/checkmark-circle 1.png" alt="selecionado" />
+          <div class="item-selecao" onclick="selecionaItem('prato',this)">
+            <img
+              src="./images/xgalinha.png"
+              alt="Frango Yin Yang"
+              class="img-item"
+            />
+            <h2>X Galinha</h2>
+            <p class="descricao">Frango, mussarela, milho, tomate e batata.</p>
+            <div class="linha-preco">
+              <p class="preco">17,90</p>
+              <img src="./images/checkmark-circle 1.png" alt="selecionado" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="secao sobremesa">
-      <h1>Por fim, sua sobremesa</h1>
-      <div class="caixa-items">
-        <div class="item-selecao" onclick="selecionaItem('sobremesa',this)">
-          <img src="./images/pudim 1.png" alt="Pudim" class="img-item" />
-          <h2>Pudim</h2>
-          <p class="descricao">Apenas pudim</p>
-          <div class="linha-preco">
-            <p class="preco">7,90</p>
-            <img src="./images/checkmark-circle 1.png" alt="selecionado" />
+      <div class="secao bebida">
+        <h1>Agora, sua bebida</h1>
+        <div class="caixa-items">
+          <div class="item-selecao" onclick="selecionaItem('bebida',this)">
+            <img
+              src="./images/coquinha_gelada 1.png"
+              alt="Coquinha Gelada"
+              class="img-item"
+            />
+            <h2>Coquinha gelada</h2>
+            <p class="descricao">Lata 350ml</p>
+            <div class="linha-preco">
+              <p class="preco">4,90</p>
+              <img src="./images/checkmark-circle 1.png" alt="selecionado" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="secao sobremesa">
+        <h1>Por fim, sua sobremesa</h1>
+        <div class="caixa-items">
+          <div class="item-selecao" onclick="selecionaItem('sobremesa',this)">
+            <img src="./images/pudim 1.png" alt="Pudim" class="img-item" />
+            <h2>Pudim</h2>
+            <p class="descricao">Apenas pudim</p>
+            <div class="linha-preco">
+              <p class="preco">7,90</p>
+              <img src="./images/checkmark-circle 1.png" alt="selecionado" />
+            </div>
           </div>
         </div>
       </div>
@@ -95,13 +97,15 @@
       </button>
       <button class="btn-cancelar" onclick="cancelarPedido()">Cancelar</button>
     </div>
-    <button
-      class="btn-fechar-pedido btn-desabilitado"
-      disabled
-      onclick="finalizaPedido()"
-    >
-      Selecione os 3 itens para fechar o pedido
-    </button>
+    <div class="caixa-btn-finaliza">
+      <button
+        class="btn-fechar-pedido btn-desabilitado"
+        disabled
+        onclick="finalizaPedido()"
+      >
+        Selecione os 3 itens para fechar o pedido
+      </button>
+    </div>
     <button onclick="replica()">replica</button>
     <script>
       function replica() {
