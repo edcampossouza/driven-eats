@@ -3,18 +3,24 @@
 }
 .topo {
   background-color: #cf2b2b;
-  padding: 8px 0px 18px 21px;
+  padding: 0 0px 0 21px;
   color: #fff;
-  font-family: "Righteous", cursive;
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 92px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .topo h1 {
   font-size: 44px;
+  font-family: "Righteous", cursive;
+  letter-spacing: -0.012em;
+  margin-bottom: 4px;
 }
 
-.topo h2 {
-  font-size: 18px;
-}
 
 p,
 h1,
@@ -51,7 +57,7 @@ p.preco::before {
   border-radius: 9px;
   margin: 8px 8px;
   width: 172px;
-  height: 218px;
+  height: 202px;
   display: flex;
   flex-direction: column;
   justify-content: center;
