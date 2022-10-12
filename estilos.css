@@ -17,6 +17,7 @@
 }
 
 p,
+h1,
 h2 {
   font-family: "Roboto", sans-serif;
 }
@@ -112,6 +113,51 @@ p.preco::before {
 
 .selecionado .linha-preco img {
   display: inline;
+}
+
+.caixa-confirmacao {
+  width: 377px;
+  height: 353px;
+  background-color: #50d074;
+  top: calc(50% - 151px);
+  left: calc(50% - 188px);
+  border-radius: 9px;
+  display: none;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.caixa-confirmacao h1 {
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.btn-confirmar {
+  width: 329px;
+  height: 52px;
+  border-radius: 100px;
+  font-size: 22px;
+  font-weight: bold;
+  background-color: #ffffff;
+}
+
+.btn-confirmar a {
+  color: #50d074;
+}
+
+.btn-cancelar {
+  width: 100%;
+  font-size: 20px;
+  background-color: #50d074;
+  border-width: 0;
+  font-weight: bold;
+  color: #ffffff;
+}
+.mostra {
+  display: flex;
 }
 
 /*classe aplicada dinamicamente aos itens que estiverem selecionados */

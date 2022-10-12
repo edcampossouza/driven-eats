@@ -7,6 +7,28 @@ let nome_sobremesa = null,
 
 let itens_selecionados = 0;
 
+//bloqueia os outros comandos quando
+//a tela de confirmacao estiver ativada
+
+let tela_confirmacao = false;
+
+const caixa_confirmacao =
+  document.getElementsByClassName("caixa-confirmacao")[0];
+
+function textoUrl() {
+  let texto = "Olá, gostaria de fazer o pedido:\n";
+  texto += "- Prato: " + nome_prato + "\n";
+  texto += "- Bebida: " + nome_bebida + "\n";
+  texto += "- Sobremesa: " + nome_sobremesa + "\n";
+  const preco =
+    parseFloat(preco_prato.replace(",", ".")) +
+    parseFloat(preco_bebida.replace(",", ".")) +
+    parseFloat(preco_sobremesa.replace(",", "."));
+  texto += "Total: R$ " + preco.toFixed(2);
+  texto = "https://wa.me/" + "?text=" + encodeURIComponent(texto);
+  return texto;
+}
+
 function textoPedido() {
   let texto = "Olá, gostaria de fazer o pedido:\n";
   texto += "- Prato: " + nome_prato + "\n";
@@ -16,12 +38,11 @@ function textoPedido() {
     parseFloat(preco_prato.replace(",", ".")) +
     parseFloat(preco_bebida.replace(",", ".")) +
     parseFloat(preco_sobremesa.replace(",", "."));
-  texto += "Total: R$ " + preco.toFixed(2).replace(".", ",");
-  texto = "https://wa.me/" + "?text=" + encodeURIComponent(texto);
-  return texto;
+  return texto + "Preço " + preco.toFixed(2);
 }
 
 function selecionaItem(secao, e) {
+  if (tela_confirmacao) return;
   const preco = e.getElementsByClassName("preco")[0].innerText;
   const nome = e.getElementsByTagName("h2")[0].innerText;
 
@@ -60,5 +81,23 @@ function setaValores(nome, preco, secao) {
 }
 
 function finalizaPedido() {
-  alert(textoPedido());
+  const url = textoUrl();
+  const elementoLink = caixa_confirmacao.getElementsByTagName("a")[0];
+  elementoLink.href = url;
+  const txt_pedido = document.getElementsByClassName("texto-pedido")[0];
+  txt_pedido.innerText = textoPedido();
+
+  caixa_confirmacao.classList.add("mostra");
+  tela_confirmacao = true;
+}
+
+function confirmarPedido() {
+  //enviar para whatsapp
+
+  alert(url);
+}
+
+function cancelarPedido() {
+  tela_confirmacao = false;
+  caixa_confirmacao.classList.remove("mostra");
 }
