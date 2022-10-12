@@ -121,6 +121,8 @@ p.preco::before {
   position: fixed;
   bottom: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
   box-sizing: border-box;
 }
 .btn-fechar-pedido {
@@ -193,7 +195,7 @@ p.preco::before {
   color: #ffffff;
 }
 
-.texto-pedido{
+.texto-pedido {
   width: 80%;
   height: 45%;
   display: flex;
@@ -201,7 +203,7 @@ p.preco::before {
   justify-content: space-around;
 }
 
-.texto-pedido .total span{
+.texto-pedido .total span {
   font-weight: bold;
 }
 .caixa-confirmacao .texto-pedido p {
@@ -216,6 +218,7 @@ p.preco::before {
   font-size: 22px;
   font-weight: bold;
   background-color: #ffffff;
+  border-width: 0;
 }
 
 .btn-confirmar a {
@@ -246,5 +249,17 @@ p.preco::before {
 
   .caixa-items {
     overflow-x: hidden;
+  }
+}
+
+@media screen and (max-width: 377px) {
+  .caixa-confirmacao {
+    width: 100%;
+    left: 0;
+  }
+
+  .btn-confirmar {
+    width: 100%;
+    border-radius: 0;
   }
 }
