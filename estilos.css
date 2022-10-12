@@ -40,7 +40,6 @@ p.preco::before {
   background-color: #eeeeee;
   padding-top: 123px;
   padding-bottom: 92px;
-  
 }
 .secao {
   background-color: #eeeeee;
@@ -68,37 +67,46 @@ p.preco::before {
   background-color: #fff;
   border-radius: 9px;
   margin: 0px 8px;
-  width: 172px;
+  width: 162px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 8px -3px black;
-  box-sizing: border-box;
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 8px -5px black;
 }
 
 .prato .item-selecao {
-  height: 216px;
+  height: 206px;
 }
 
 .bebida .item-selecao {
-  height: 202px;
+  height: 192px;
 }
 
 .sobremesa .item-selecao {
-  height: 197px;
+  height: 187px;
 }
 
 .item-selecao h2 {
   color: #333333;
   font-size: 16pxS;
   font-weight: bold;
+  width: 147px;
+  height: 23px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
 }
 
 .item-selecao .descricao {
   color: #a6a6a6;
-  font-weight: 200;
+  font-weight: 300;
   font-size: 15px;
+  width: 147px;
+  height: 39px;
+  display: flex;
+  align-items: center;
 }
 
 .item-selecao:nth-child(1) {
@@ -139,10 +147,10 @@ p.preco::before {
 }
 
 .linha-preco {
+  margin-top: 18px;
   display: flex;
-  width: 100%;
-  flex-direction: space-between;
-  justify-content: space-evenly;
+  width: 147px;
+  justify-content: flex-start;
 }
 
 .linha-preco img {
@@ -153,6 +161,10 @@ p.preco::before {
 
 .selecionado .linha-preco img {
   display: inline;
+}
+
+.selecionado .linha-preco {
+  justify-content: space-between;
 }
 
 .caixa-confirmacao {
@@ -173,6 +185,28 @@ p.preco::before {
   font-weight: bold;
   font-size: 22px;
   color: #ffffff;
+}
+
+.caixa-confirmacao span {
+  font-size: 22px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.texto-pedido{
+  width: 80%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.texto-pedido .total span{
+  font-weight: bold;
+}
+.caixa-confirmacao .texto-pedido p {
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-confirmar {

@@ -30,15 +30,18 @@ function textoUrl() {
 }
 
 function textoPedido() {
-  let texto = "Olá, gostaria de fazer o pedido:\n";
-  texto += "- Prato: " + nome_prato + "\n";
-  texto += "- Bebida: " + nome_bebida + "\n";
-  texto += "- Sobremesa: " + nome_sobremesa + "\n";
   const preco =
     parseFloat(preco_prato.replace(",", ".")) +
     parseFloat(preco_bebida.replace(",", ".")) +
     parseFloat(preco_sobremesa.replace(",", "."));
-  return texto + "Preço " + preco.toFixed(2);
+  let htmlPedido = `<p><span>${nome_prato}</span><span>${preco_prato}</span></p>
+  <p><span>${nome_bebida}</span><span>${preco_bebida}</span></p>
+  <p> <span>${nome_sobremesa}</span><span>${preco_sobremesa}</span></p>
+  <p class='total'><span>Total</span><span>R$ ${preco
+    .toFixed(2)
+    .replace(".", ",")}</span></p>
+  `;
+  return htmlPedido;
 }
 
 function selecionaItem(secao, e) {
@@ -85,7 +88,7 @@ function finalizaPedido() {
   const elementoLink = caixa_confirmacao.getElementsByTagName("a")[0];
   elementoLink.href = url;
   const txt_pedido = document.getElementsByClassName("texto-pedido")[0];
-  txt_pedido.innerText = textoPedido();
+  txt_pedido.innerHTML = textoPedido();
 
   caixa_confirmacao.classList.add("mostra");
   tela_confirmacao = true;
