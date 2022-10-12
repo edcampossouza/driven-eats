@@ -39,7 +39,7 @@ p.preco::before {
 .secoes {
   background-color: #eeeeee;
   padding-top: 123px;
-  padding-bottom: 92px;
+  padding-bottom: 108px;
 }
 .secao {
   background-color: #eeeeee;
@@ -242,15 +242,6 @@ p.preco::before {
   border: 5px solid #32b72f;
 }
 
-@media screen and (max-width: 613px) {
-  /* -O estilo abaixo impossibilita a rolagem lateral no modo mobile */
-  /* -Adicionado apenas para satisfazer o requerimento do projeto: */
-  /* "No modo desktop um scroll é exibido, mas no modo celular não" */
-
-  .caixa-items {
-    overflow-x: hidden;
-  }
-}
 
 @media screen and (max-width: 377px) {
   .caixa-confirmacao {
