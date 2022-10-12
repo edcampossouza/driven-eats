@@ -149,12 +149,14 @@ p.preco::before {
 }
 
 .linha-preco {
-  margin-top: 18px;
   display: flex;
   width: 147px;
   justify-content: flex-start;
 }
 
+.prato .linha-preco {
+  margin-top: 18px;
+}
 .linha-preco img {
   width: 19px;
   height: 19px;
@@ -241,7 +243,6 @@ p.preco::before {
 .selecionado {
   border: 5px solid #32b72f;
 }
-
 
 @media screen and (max-width: 377px) {
   .caixa-confirmacao {
