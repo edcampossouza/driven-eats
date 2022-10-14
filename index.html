@@ -25,121 +25,161 @@
       <h2>Sua comida em 6 minutos</h2>
     </div>
     <div class="secoes">
-      <div class="secao prato">
+      <div class="secao prato" data-test="dishes">
         <h1>Primeiro, seu prato</h1>
         <div class="caixa-items">
-          <div class="item-selecao" onclick="selecionaItem('prato',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('prato',this)"
+            data-test="food-option"
+          >
             <img
               src="./images/frango_yin_yang 1.png"
               alt="Frango Yin Yang"
               class="img-item"
             />
-            <h2>Frango Yin Yang</h2>
+            <h2 data-test="food-title">Frango Yin Yang</h2>
             <p class="descricao">Um pouco de batata, um pouco de salada</p>
             <div class="linha-preco">
-              <p class="preco">14,90</p>
+              <p class="preco" data-test="food-price">R$ 14,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
-          <div class="item-selecao" onclick="selecionaItem('prato',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('prato',this)"
+            data-test="food-option"
+          >
             <img
               src="./images/galinha.jpg"
               alt="Frango Yin Yang"
               class="img-item"
             />
-            <h2>X Galinha</h2>
+            <h2 data-test="food-title">X Galinha</h2>
             <p class="descricao">Frango, mussarela, milho, tomate e batata.</p>
             <div class="linha-preco">
-              <p class="preco">17,90</p>
+              <p class="preco" data-test="food-price">R$ 17,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
-          <div class="item-selecao" onclick="selecionaItem('prato',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('prato',this)"
+            data-test="food-option"
+          >
             <img
               src="./images/x-infarto.jpg"
               alt="Frango Yin Yang"
               class="img-item"
             />
-            <h2>X Lanchinho</h2>
+            <h2 data-test="food-title">X Lanchinho</h2>
             <p class="descricao">Aquele lanche rápido no intervalo da aula</p>
             <div class="linha-preco">
-              <p class="preco">27,90</p>
+              <p class="preco" data-test="food-price">R$ 27,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
         </div>
       </div>
-      <div class="secao bebida">
+      <div class="secao bebida" data-test="drinks">
         <h1>Agora, sua bebida</h1>
         <div class="caixa-items">
-          <div class="item-selecao" onclick="selecionaItem('bebida',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('bebida',this)"
+            data-test="food-option"
+          >
             <img
               src="./images/coquinha_gelada 1.png"
               alt="Coquinha Gelada"
               class="img-item"
             />
-            <h2>Coquinha gelada</h2>
+            <h2 data-test="food-title">Coquinha gelada</h2>
             <p class="descricao">Lata 350ml</p>
             <div class="linha-preco">
-              <p class="preco">4,90</p>
+              <p class="preco" data-test="food-price">R$ 4,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
-          <div class="item-selecao" onclick="selecionaItem('bebida',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('bebida',this)"
+            data-test="food-option"
+          >
             <img
               src="./images/suco-laranja-2.jpg"
               alt="Coquinha Gelada"
               class="img-item"
             />
-            <h2>Suco de Laranja</h2>
+            <h2 data-test="food-title">Suco de Laranja</h2>
             <p class="descricao">Laranjas meramente ilustrativas</p>
             <div class="linha-preco">
-              <p class="preco">6,90</p>
+              <p class="preco" data-test="food-price">R$ 6,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
-          <div class="item-selecao" onclick="selecionaItem('bebida',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('bebida',this)"
+            data-test="food-option"
+          >
             <img
               src="./images/corote.png"
               alt="Coquinha Gelada"
               class="img-item"
             />
-            <h2>Barril Surpresa</h2>
+            <h2 data-test="food-title">Barril Surpresa</h2>
             <p class="descricao">Seja a sensação da aula de integração</p>
             <div class="linha-preco">
-              <p class="preco">3,90</p>
+              <p class="preco" data-test="food-price">R$ 3,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
         </div>
       </div>
-      <div class="secao sobremesa">
+      <div class="secao sobremesa" data-test="desserts">
         <h1>Por fim, sua sobremesa</h1>
         <div class="caixa-items">
-          <div class="item-selecao" onclick="selecionaItem('sobremesa',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('sobremesa',this)"
+            data-test="food-option"
+          >
             <img src="./images/pudim 1.png" alt="Pudim" class="img-item" />
-            <h2>Pudim</h2>
+            <h2 data-test="food-title">Pudim</h2>
             <p class="descricao">Apenas pudim</p>
             <div class="linha-preco">
-              <p class="preco">7,90</p>
+              <p class="preco" data-test="food-price">R$ 7,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
-          <div class="item-selecao" onclick="selecionaItem('sobremesa',this)">
-            <img src="./images/brigadeiro.jpeg" alt="Brigadeiro" class="img-item" />
-            <h2>Brigadeiro</h2>
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('sobremesa',this)"
+            data-test="food-option"
+          >
+            <img
+              src="./images/brigadeiro.jpeg"
+              alt="Brigadeiro"
+              class="img-item"
+            />
+            <h2 data-test="food-title">Brigadeiro</h2>
             <p class="descricao">chocolate com chocolate</p>
             <div class="linha-preco">
-              <p class="preco">9,90</p>
+              <p class="preco" data-test="food-price">R$ 9,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>
-          <div class="item-selecao" onclick="selecionaItem('sobremesa',this)">
+          <div
+            class="item-selecao"
+            onclick="selecionaItem('sobremesa',this)"
+            data-test="food-option"
+          >
             <img src="./images/qg.jpg" alt="Pudim" class="img-item" />
-            <h2>Queijo & Goiabada</h2>
+            <h2 data-test="food-title">Queijo & Goiabada</h2>
             <p class="descricao">uai..</p>
             <div class="linha-preco">
-              <p class="preco">6,90</p>
+              <p class="preco" data-test="food-price">R$ 6,90</p>
               <img src="./images/checkmark-circle 1.png" alt="selecionado" />
             </div>
           </div>

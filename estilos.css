@@ -33,9 +33,6 @@ h2 {
   height: 87px;
   border-radius: 4px;
 }
-p.preco::before {
-  content: "R$ ";
-}
 
 .secoes {
   background-color: #eeeeee;
