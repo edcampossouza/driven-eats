@@ -1,3 +1,5 @@
+const numero_telefone = "5537991555529";
+
 let nome_prato = null,
   preco_prato = null;
 let nome_bebida = null,
@@ -25,7 +27,7 @@ function textoUrl() {
     parseFloat(preco_bebida.replace(",", ".")) +
     parseFloat(preco_sobremesa.replace(",", "."));
   texto += "Total: R$ " + preco.toFixed(2);
-  texto = "https://wa.me/" + "?text=" + encodeURIComponent(texto);
+  texto = "https://wa.me/" + numero_telefone + "?text=" + encodeURIComponent(texto);
   return texto;
 }
 
