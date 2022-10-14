@@ -163,19 +163,6 @@
         Selecione os 3 itens para fechar o pedido
       </button>
     </div>
-    <!--USADO PARA TESTES-->
-    <script>
-      function replica() {
-        const sec = document.getElementsByClassName("caixa-items");
-        for (var i = 0; i < 20; i++) {
-          for (var j = 0; j < sec.length; j++) {
-            const item1 = sec[j].getElementsByClassName("item-selecao")[0];
-            var el = item1.cloneNode(true);
-            sec[j].appendChild(el);
-          }
-        }
-      }
-    </script>
     <script src="./script.js"></script>
   </body>
 </html>
