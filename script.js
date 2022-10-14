@@ -48,7 +48,7 @@ function textoPedido() {
 
 function selecionaItem(secao, e) {
   if (tela_confirmacao) return;
-  const preco = e.getElementsByClassName("preco")[0].innerText;
+  const preco = e.getElementsByClassName("preco")[0].innerText.replace("R$", '');
   const nome = e.getElementsByTagName("h2")[0].innerText;
 
   //remove a selecao de qualquer outro item daquela secao
