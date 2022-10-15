@@ -26,8 +26,9 @@ function textoUrl() {
     parseFloat(preco_prato.replace(",", ".")) +
     parseFloat(preco_bebida.replace(",", ".")) +
     parseFloat(preco_sobremesa.replace(",", "."));
-  texto += "Total: R$ " + preco.toFixed(2);
-  texto = "https://wa.me/" + numero_telefone + "?text=" + encodeURIComponent(texto);
+  texto += "Total: R$ " + preco.toFixed(2).replace(".", ",");
+  texto =
+    "https://wa.me/" + numero_telefone + "?text=" + encodeURIComponent(texto);
   return texto;
 }
 
@@ -48,7 +49,9 @@ function textoPedido() {
 
 function selecionaItem(secao, e) {
   if (tela_confirmacao) return;
-  const preco = e.getElementsByClassName("preco")[0].innerText.replace("R$", '');
+  const preco = e
+    .getElementsByClassName("preco")[0]
+    .innerText.replace("R$", "");
   const nome = e.getElementsByTagName("h2")[0].innerText;
 
   //remove a selecao de qualquer outro item daquela secao
